@@ -267,7 +267,7 @@ func _assistant_state():
 		"player_can_act": player_can_act,
 		"player_hp": health_player,
 		"dealer_hp": health_opponent,
-		"max_hp": roundArray[currentRound].startingHealth if currentRound >= 0 and currentRound < roundArray.size() else 0,
+		"max_hp": roundArray[0].startingHealth if not roundArray.is_empty() else 0,
 		"round_index": currentRound,
 		"round_count": roundArray.size(),
 		"batch_index": playerData.currentBatchIndex,
